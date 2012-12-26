@@ -10,22 +10,13 @@ svg.attr("height", svgHeight);
 
 var g = svg.append("g");
 
-function drawCircle (x, y, radius) {
-	var startPadding = 30;
-	var columnPadding = 30;
-	var columnWidth = 20;
-	var yStep = 0.5;
-	var height = row * yStep;
-	var x = (column - 1) * (columnWidth + columnPadding) + startPadding;
+function drawCircle (r, cx, cy) {
 	var circle = g.append("circle");
-	circle.attr("radius", 50);
-	circle.attr("x", 30);
-	circle.attr("y", 30);
+	circle.attr("r", r);
+	circle.attr("cx", cx);
+	circle.attr("cy", cy);
 }
 
-// column - number of class in school
-// row - count of missed classes
-
-drawCircle(10, 30, 5);
-drawCircle(20, 30, 5);
-drawCircle(40, 30, 10);
+drawCircle(30, 100, 100);
+drawCircle(20, 150, 50);
+drawCircle(50, 250, 150);
